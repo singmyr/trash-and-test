@@ -1,0 +1,19 @@
+kind: pipeline
+name: default
+
+workspace:
+  base: /go
+  path: src/github.com/singmyr/trash-and-test
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go get
+  - go test
+
+trigger:
+ event:
+ - pull_request
+ branch:
+ - master

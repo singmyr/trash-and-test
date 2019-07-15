@@ -11,3 +11,9 @@ steps:
   commands:
   - go get
   - go test
+
+trigger:
+ event:
+ - pull_request
+ branch:
+ - master
